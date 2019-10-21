@@ -1,0 +1,14 @@
+eval $(docker-machine env Char)
+
+# When you run docker commands, the CLI connects to the Docker daemon's API, and it's the API that actually does the work. You can manage remote Docker hosts from your local CLI by changing the API connection details, which Docker stores in environment variables on the client where the CLI runs.
+#
+# With Docker Machine, your Docker engine is running in a VM, which is effectively a remote machine, so your local CLI needs to be configured to connect to it. Docker Machine knows the connection details for the engines it manages, so running docker-machine env default prints out the details for the default machine. The output is something like this:
+#
+# $ docker-machine env default
+# export DOCKER_TLS_VERIFY="1"
+# export DOCKER_HOST="tcp://172.16.62.130:2376"
+# export DOCKER_CERT_PATH="/Users/elton/.docker/machine/machines/default"
+# export DOCKER_MACHINE_NAME="default"
+# Using eval executes each of those export commands, instead of just writing them to the console, so it's a quick way of setting up your environment variables.
+#
+# You can undo it and reset the local environment with docker-machine env --unset, which gives you the output for unsetting the environment (so the CLI will try to connect to the local Docker Engine).

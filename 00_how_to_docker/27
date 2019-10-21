@@ -1,0 +1,2 @@
+docker service logs -f $(docker service ps engineering-bay -f "name=engineering-bay.1" -q)
+# docker service ps -f "name=redis.1" redis | https://docs.docker.com/engine/reference/commandline/service_ps/

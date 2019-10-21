@@ -1,0 +1,3 @@
+docker logs -f spawning-pool
+# docker logs выводит список всех событий произошедших внутри заданного контейнера. 
+# события из потоков stdout и stderr

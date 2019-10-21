@@ -1,0 +1,4 @@
+docker run -d --name roach-warden -p 8081:80 --link spawning-pool:db phpmyadmin/phpmyadmin
+# Phpmyadmin must point to MySQL Server. So that we must link both containers by adding the option
+# --link name-of-container:name-of-imag
+# https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/

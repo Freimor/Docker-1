@@ -1,0 +1,4 @@
+# docker run -i -t --rm debian
+apt-get update && apt-get upgrade -y
+apt-get install vim git build-essential -y
+# build-essential contains gcc, make and other tools
